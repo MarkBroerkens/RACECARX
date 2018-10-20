@@ -7,7 +7,7 @@ Inspired by
 * [MIT racecar](https://mit-racecar.github.io/)
 * [Racecar/J](https://racecarj.com/)
 * [F1/10 Autonomous Racing Competition](http://f1tenth.org/)
-* [Jetson racecar] (https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
+* [Jetson racecar](https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
 * [eagleMK4](https://github.com/r7vme/eagleMK4)
 
 
@@ -20,7 +20,7 @@ Inspired by
 | IMU | [SparkFun MPU-9250 9DoF Razor IMU M0](https://www.exp-tech.de/sensoren/beschleunigung/7879/sparkfun-mpu-9250-9dof-razor-imu-m0) | |
 | Camera | [Logitech-C920](https://www.amazon.de/Logitech-C920-Webcam-Videogespr%C3%A4che-Stereo-Mikrofonen/dp/B006A2Q81M) | |
 | VESC | [Enertion FOCBOX](https://electricboardsolutions.com/products/enertion-focbox)| alternative: [Turnigy SK8-ESC V4.12](https://hobbyking.com/en_us/turnigy-sk8-esc-v4-12-for-electric-skateboard-conversion-w-bec.html)|
-| Compute module  | [Nvidia Jetson AGX Xavier Development Kit](https://developer.nvidia.com/embedded/buy/jetson-xavier-devkit) | register for the Nvidia developmenter program for special discount. [Slides from webinar](https://github.com/dusty-nv/jetson-presentations/raw/master/20181004_Jetson_AGX_Xavier_New_Era_Autonomous_Machines.pdf)|
+| Compute module  | [Nvidia Jetson AGX Xavier Development Kit](https://developer.nvidia.com/embedded/buy/jetson-xavier-devkit) | register for the Nvidia developmenter program for special discount. [Slides from Webinar](https://github.com/dusty-nv/jetson-presentations/raw/master/20181004_Jetson_AGX_Xavier_New_Era_Autonomous_Machines.pdf), [Nvidia Forum](https://devtalk.nvidia.com/default/topic/1039020/jetson-agx-xavier/links-to-jetson-xavier-resources-amp-wiki/)|
 | SSD (Optional)| |  M.2 Key M HDD|
 | M.2 MODUL - WLAN+ BLUETOOTH 4.0 | | |
 | 10x USB 3.0 hub | [ORICO 40W 10 Ports USB 3.0 hub](https://www.amazon.de/gp/product/B075QZ88DM) | |
