@@ -21,6 +21,7 @@ Inspired by
 | VESC | [Enertion FOCBOX](https://electricboardsolutions.com/products/enertion-focbox)| alternative: [Turnigy SK8-ESC V4.12](https://hobbyking.com/en_us/turnigy-sk8-esc-v4-12-for-electric-skateboard-conversion-w-bec.html)|
 | Compute module  | [Nvidia Jetson AGX Xavier Development Kit](https://developer.nvidia.com/embedded/buy/jetson-xavier-devkit) | register for the Nvidia developmenter program for special discount |
 | SSD (Optional)| |  M.2 Key M HDD|
+| M.2 MODUL - WLAN+ BLUETOOTH 4.0 | | |
 | 10x USB 3.0 hub | [ORICO 40W 10 Ports USB 3.0 hub](https://www.amazon.de/gp/product/B075QZ88DM) | |
 | Hobby glass | 2 x [25cm x 50cm x 4mm](https://www.amazon.de/70101022-Hobbyglas-Gr%C3%B6%C3%9Fe-transparent-Glasscheibe/dp/B00ZZPHZ08) | |
 | Camera mount | 2 x [Camera Wall Mount](https://www.amazon.de/gp/product/B00CKE5FBS/) | |
