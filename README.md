@@ -27,6 +27,7 @@ Inspired by
 | Bluetooth / Wifi Extension | | M.2 Key E |
 | M.2 MODUL - WLAN+ BLUETOOTH 4.0 | | |
 | 10x USB 3.0 hub | [ORICO 40W 10 Ports USB 3.0 hub](https://www.amazon.de/gp/product/B075QZ88DM) | |
+| usb c to usb b adapter | | |
 | Hobby glass | 2 x [25cm x 50cm x 4mm](https://www.amazon.de/70101022-Hobbyglas-Gr%C3%B6%C3%9Fe-transparent-Glasscheibe/dp/B00ZZPHZ08) | |
 | Camera mount | 2 x [Camera Wall Mount](https://www.amazon.de/gp/product/B00CKE5FBS/) | |
 | LiPo battery 3S | 2 x [ZIPPY Flightmax 5000mAh 3S1P 20C](https://hobbyking.com/en_us/zippy-flightmax-5000mah-3s1p-20c.html) | One for car, one for Jetson |
