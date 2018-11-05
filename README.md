@@ -21,7 +21,7 @@ Inspired by
 | LiPo voltage checker | [lipo voltage checker](https://hobbyking.com/en_us/hobbykingtm-lipo-voltage-checker-2s-8s.html) | |
 | LiPo charger | [IMax B6AC V2 Balance Charger](https://www.amazon.de/VINGO®ORIGINAL-Netzteil-Batterie-Balance-Ladegerät/dp/B01AXVI6YW/ref=sr_1_1?ie=UTF8&qid=1540673676&sr=8-1&keywords=IMAX+Balance+Charger) | |
 | Compute module  | [Nvidia Jetson AGX Xavier Development Kit](https://developer.nvidia.com/embedded/buy/jetson-xavier-devkit) | register for the Nvidia developmenter program for special discount. [Slides from Webinar](https://github.com/dusty-nv/jetson-presentations/raw/master/20181004_Jetson_AGX_Xavier_New_Era_Autonomous_Machines.pdf), [Nvidia Forum](https://devtalk.nvidia.com/default/topic/1039020/jetson-agx-xavier/links-to-jetson-xavier-resources-amp-wiki/)|
-| ESC | [Enertion FOCBOX](https://electricboardsolutions.com/products/enertion-focbox)| alternative: [Turnigy SK8-ESC V4.12](https://hobbyking.com/en_us/turnigy-sk8-esc-v4-12-for-electric-skateboard-conversion-w-bec.html)|
+| ESC | [Enertion FOCBOX](https://electricboardsolutions.com/products/enertion-focbox)| alternative: [Turnigy SK8-ESC V4.12](https://hobbyking.com/de_de/turnigy-sk8-esc-v4-12-for-electric-skateboard-conversion-w-bec.html)|
 | Battery adapter | [HXT 4mm bis XT-60 Batterie-Adapter](https://hobbyking.com/de_de/hxt-4mm-to-xt-60-battery-adapter-2pcs-bag.html) | required to connect FOCBIX with Zippy Lipo |
 | SSD (optional)|  [Samsung 500GB Evo M2 2280](https://www.mindfactory.de/product_info.php/500GB-Samsung-970-Evo-M-2-2280-NVMe-PCIe-3-0-x4-32Gb-s-3D-NAND-TLC--MZ-_1246504.html)|  M.2 Key M HDD|
 | Bluetooth / Wifi Extension | | M.2 Key E |
