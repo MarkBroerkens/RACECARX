@@ -23,12 +23,12 @@ Inspired by
 | Compute module  | [Nvidia Jetson AGX Xavier Development Kit](https://developer.nvidia.com/embedded/buy/jetson-xavier-devkit) | register for the Nvidia developmenter program for special discount. [Slides from Webinar](https://github.com/dusty-nv/jetson-presentations/raw/master/20181004_Jetson_AGX_Xavier_New_Era_Autonomous_Machines.pdf), [Nvidia Forum](https://devtalk.nvidia.com/default/topic/1039020/jetson-agx-xavier/links-to-jetson-xavier-resources-amp-wiki/)|
 | ESC | [Enertion FOCBOX](https://electricboardsolutions.com/products/enertion-focbox)| alternative: [Turnigy SK8-ESC V4.12](https://hobbyking.com/de_de/turnigy-sk8-esc-v4-12-for-electric-skateboard-conversion-w-bec.html)|
 | Battery adapter | [HXT 4mm bis XT-60 Batterie-Adapter](https://hobbyking.com/de_de/hxt-4mm-to-xt-60-battery-adapter-2pcs-bag.html) | required to connect FOCBOX with Zippy Lipo |
-| SSD (optional)|  [Samsung 970 EVO 500GB, M2 2280](https://www.mindfactory.de/product_info.php/500GB-Samsung-970-Evo-M-2-2280-NVMe-PCIe-3-0-x4-32Gb-s-3D-NAND-TLC--MZ-_1246504.html)|  M.2 Key M HDD|
+| SSD |  [Samsung 970 EVO 500GB, M2 2280](https://www.mindfactory.de/product_info.php/500GB-Samsung-970-Evo-M-2-2280-NVMe-PCIe-3-0-x4-32Gb-s-3D-NAND-TLC--MZ-_1246504.html)|  M.2 Key M HDD|
 | ?Bluetooth / Wifi Extension | | M.2 Key E |
 | ?M.2 MODUL - WLAN+ BLUETOOTH 4.0 | | |
 | 10x USB 3.0 hub | [ORICO 40W 10 Ports USB 3.0 hub](https://www.amazon.de/gp/product/B075QZ88DM) | |
 | usb c to usb b adapter | [USB 3.1 Type C (USB-C) auf Type B (USB-B) Kable](https://www.amazon.de/gp/product/B00UXKTJE0) | |
-| ?2D Lidar | [YDLIDAR X4](https://www.robotshop.com/de/en/ydlidar-x4-360-laser-scanner.html) | |
+| 2D Lidar | [Slamtec RPLidar A1M8](https://www.exp-tech.de/sensoren/entfernungnaeherung/8946/rplidar-a1m8-360-degree-laser-scanner-kit-12m) | |
 | IMU | [SparkFun MPU-9250 9DoF Razor IMU M0](https://eckstein-shop.de/SparkFun-9DoF-Razor-IMU-M0-MPU-9250) | |
 | Camera | [OpenMV Cam M7](https://www.mybotshop.de/OpenMV-Cam-M7) with [fesheye lens](https://www.mybotshop.de/OpenMV-Kameraobjektiv-Ultra-Wide-Angle-Objektiv)| |
 | | ? [Intel realsense D435](https://www.voelkner.de/products/1102651/Intel-RealSense-Depth-Camera-D435-Full-HD-Webcam-1920-x-1080-Pixel-Klemm-Halterung-Standfuss.html?ref=19&utm_source=idealo&utm_medium=CPC&utm_campaign=D748271) | |
