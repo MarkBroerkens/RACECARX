@@ -1,7 +1,5 @@
-# carai-mk-2
-car.AI Second Edition
-
-1:10 autonomous RC robocar.
+# RACECAR/X
+1:10 autonomous RC robocar that is controlled by NVIDIA AGX Xavier.
 
 Inspired by
 * [MIT racecar](https://mit-racecar.github.io/)
