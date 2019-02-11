@@ -3,10 +3,19 @@ This tutorial is based on
 * ROS Melodic
 
 # Setting up the hardware components
-## <a name="first_step"></a> update to JetPack 4.1.1 Developer Preview
+## <a name="first_step"></a> Xavier: update to JetPack 4.1.1 Developer Preview
 [Installing JetPack 4.1.1 Developer Preview on Jetsonhacks.com](https://www.jetsonhacks.com/2018/10/05/jetpack-4-1-developer-preview-nvidia-jetson-agx-xavier-developer-kit/)
 
 Note: After installing JetPack, host computer is not able to apt-get update. This happens since the installer adds some ARM repositories. You will have to add [arch=amd64,i386] for each line in /etc/apt/sources.list starting with 'deb '. See [Issue on Nvidia DevTalk](https://devtalk.nvidia.com/default/topic/1004601/jetson-tx2/after-installing-jetpack3-0-host-computer-is-not-able-to-apt-get-update/post/5247401/#5247401)
+
+## M.2 SSD
+move home to SSD
+
+## M.2 WIFI
+check config
+
+configure as access point
+
 
 ## Controller Sony DualShock 4 V2
 The Xavier doesn't come with a Bluetooth controller. You can get the [DualShock 4 USB Wireless Adaptor](https://www.playstation.com/de-de/explore/accessories/dualshock-4-usb-wireless-adaptor/) in order to connect the Dualshock controller.
@@ -57,5 +66,5 @@ git clone https://github.com/MarkBroerkens/RACECARX-ROS.git
 
 
 # References
-* [Documentation from OpenZeka Marc](https://github.com/openzeka/openzeka-marc-doc/edit/master/Documentation.md)
-* [Documentation from MIT RACECAR](https://mit-racecar.github.io)
+* [OpenZeka Marc](https://github.com/openzeka/openzeka-marc-doc/edit/master/Documentation.md)
+* [MIT RACECAR](https://mit-racecar.github.io)
