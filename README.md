@@ -8,7 +8,7 @@ Inspired by
 * [F1/10 Autonomous Racing Competition](http://f1tenth.org/)
 * [Jetson racecar](https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
 * [eagleMK4](https://github.com/r7vme/eagleMK4)
-* 
+* [OpenZeka Marc](https://github.com/openzeka/openzeka-marc-doc)
 
 
 # Components of the RACECARX
