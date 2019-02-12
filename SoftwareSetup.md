@@ -65,6 +65,13 @@ git clone https://github.com/MarkBroerkens/RACECARX-ROS.git
 ```
 
 
+## Autostart ROS at boot
+get robot-upstart from source (marks repos)
+```bash
+
+```
+
+
 # References
 * [OpenZeka Marc](https://github.com/openzeka/openzeka-marc-doc/edit/master/Documentation.md)
 * [MIT RACECAR](https://mit-racecar.github.io)
