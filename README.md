@@ -1,6 +1,10 @@
 # RACECAR/X
 1:10 autonomous RC robocar that is controlled by NVIDIA AGX Xavier.
 
+![RACECAR/X](RACECARX.jpg)
+
+
+
 Inspired by
 * [MIT racecar](https://mit-racecar.github.io/)
 * [Hypha-ROS racecar](https://github.com/Hypha-ROS/hypharos_racecar)
