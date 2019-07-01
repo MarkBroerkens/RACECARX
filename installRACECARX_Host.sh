@@ -6,7 +6,8 @@
 
 # L4T 31.1 already contains cdc-acm driver
 
-# prerequisits: ROS melodic is installed and catkin workspace is created at racecarx-ws
+# install prerequisits
+./scripts/01_installPrerequisits.sh
 
 # install the MIT RACECAR software
 ./scripts/installMITRACECAR.sh racecarx-ws
