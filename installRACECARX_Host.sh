@@ -7,10 +7,10 @@
 # L4T 31.1 already contains cdc-acm driver
 
 # install prerequisits
-./scripts/01_installPrerequisits.sh
+./scripts/01_installPrerequisits.sh
 
 # install the MIT RACECAR software
-./scripts/installMITRACECAR.sh racecarx-ws
+./scripts/installRACECARX.sh racecarx-ws
 
 echo "The RACECAR Packages should now be installed in the directory racecarx-ws"
 echo " " 
