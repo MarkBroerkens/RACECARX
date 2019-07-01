@@ -2,6 +2,35 @@ This tutorial is based on
 * JetPack 4.1.1 Developer Preview
 * ROS Melodic
 
+# Host PC Configuration
+## Ubuntu Linux 18.04
+ * Download [Ubuntu 18.04.02 Desktop image](https://ubuntu.com/download/desktop)
+ * [Installing Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0)
+
+## ROS Melodic
+* [Install ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) using apt:
+
+````bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt update
+sudo apt install ros-melodic-desktop
+````
+
+* TODO Configure ROS
+
+## RACECARX
+````bash
+cd $HOME
+git clone https://github.com/MarkBroerkens/RACECARX.git
+
+source ./RACECARX/scripts/
+````
+
+
+
+
+
 # Setting up the hardware components
 ## <a name="first_step"></a> Xavier: update to JetPack 4.1.1 Developer Preview
 [Installing JetPack 4.1.1 Developer Preview on Jetsonhacks.com](https://www.jetsonhacks.com/2018/10/05/jetpack-4-1-developer-preview-nvidia-jetson-agx-xavier-developer-kit/)
