@@ -1,23 +1,33 @@
 #!/bin/bash
 # Install the RACECAR/X software
-# This is for NVIDIA Jetson L4T 31.1
-# This will install the whole software stack for the MIT RACECAR
-# Includes ROS installation
 
-# L4T 31.1 already contains cdc-acm driver
+# prerequisits:
+#  docker image racecarx is created
 
-# prerequisits: ROS melodic is installed and catkin workspace is created at reacecarx-ws
-
-# install the MIT RACECAR software
-./scripts/installMITRACECAR.sh racecarx-ws
+# create folder
+mkdir -p $HOME/racecarx
+mkdir -p $HOME/racecarx/data
+mkdir -p $HOME/racecarx/workspace
+mkdir -p $HOME/racecarx/.ros
 
 # install udev rules
-./scripts/installRACECARUdev.sh
+./scripts/installRACECARXUdev.sh
 
 # make sure we have write access to the VESC and IMU devices
-sudo adduser nvidia dialout
+#sudo adduser $USER dialout
 
-echo "The RACECAR Packages should now be installed in the directory racecarx-ws"
+# install the RACECARX software
+# -u $(id -u):$(id -g) \
+sudo docker run \
+	--runtime nvidia \
+	-v $HOME/racecarx/workspace:/racecarx/workspace \
+	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
+	-v $HOME/racecarx/.ros:/root/.ros \
+	--privileged \
+	racecarx \
+	/bin/sh -c "/racecarx/RACECARX/scripts/installRACECARX.sh"
+
+echo "The RACECAR Packages should now be installed in the directory $HOME/racecarx/workspace"
 echo " " 
 
 
