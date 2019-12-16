@@ -24,7 +24,7 @@ sudo docker run \
 	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
 	-v $HOME/racecarx/.ros:/root/.ros \
 	--privileged \
-	racecarx \
+	racecarx:base \
 	/bin/sh -c "/racecarx/RACECARX/scripts/installRACECARX.sh"
 
 echo "The RACECAR Packages should now be installed in the directory $HOME/racecarx/workspace"

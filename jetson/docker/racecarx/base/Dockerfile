@@ -6,8 +6,11 @@ FROM broerkens/jetson-ros:melodic-desktop-bionic
 RUN apt-get update && apt-get install -y \
     vim vim-runtime tmux screen git curl wget \ 
     ros-melodic-ackermann-msgs \
+    ros-melodic-joy \
     python-rospkg \
     python-rosinstall python-rosinstall-generator python-wstool build-essential \
+    python-scipy \
+    python-serial \
     joystick \
     && rm -rf /var/lib/apt/lists/*
 
@@ -29,7 +32,6 @@ RUN apt-get update && apt-get install -y \
     librealsense2-utils \
     librealsense2-dev \
     && rm -rf /var/lib/apt/lists/*
-
 
 RUN pip3 --no-cache-dir install --upgrade \
     pip \
