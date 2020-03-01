@@ -1,11 +1,11 @@
 #!/bin/bash
 # Setup the github/mit-racecar/ ROS structure
 # Usage installRACECAR.sh <dirName>
-# dirName defaults to racecar-ws
+# dirName defaults to /racecarx/workspace
 # Fetches RACECAR ROS components, installs dependencies, and then catkin_make the workspace
 
 source /opt/ros/melodic/setup.bash
-DEFAULTDIR=~/racecarx-ws
+DEFAULTDIR=/racecarx/workspace
 CLDIR="$1"
 if [ ! -z "$CLDIR" ]; then 
  DEFAULTDIR=~/"$CLDIR"
