@@ -4,13 +4,6 @@ title: "Software Setup - Jetson Xavier"
 toc: true
 ---
 
-
-This tutorial is based on
-
- * JetPack 4.3
- * ROS Melodic
-
-
 ## Install JetPack 4.3
 * Download and install [NVIDIA SDK Manager](https://developer.nvidia.com/embedded/jetpack)
 * Note: Select the manual installation mode. 
