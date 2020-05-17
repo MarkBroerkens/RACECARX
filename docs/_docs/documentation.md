@@ -1,5 +1,5 @@
 ---
-permalink: /docs
+permalink: /docs/
 title: "Overview"
 sidebar:
   nav: "docs"
