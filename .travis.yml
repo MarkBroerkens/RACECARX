@@ -5,7 +5,7 @@ cache: bundler
 before_install:
   - gem install bundler
 script:
-  - bundle exec jekyll algolia
+  - cd docs; bundle exec jekyll algolia
 branches:
   only:
     # Change this to gh-pages if you're deploying using the gh-pages branch
