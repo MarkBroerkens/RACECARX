@@ -1,0 +1,213 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: default  # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site settings
+locale                   : "en-US"
+title: RACECAR/X
+subtitle: 1:10 autonomous vehicle
+title_separator          : "-"
+url: https://markbroerkens.github.io
+baseurl: "/RACECARX"
+repository: markbroerkens/RACECARX
+
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+twitter_username: MarkBroerkens
+github_username: MarkBroerkens
+
+search: true
+search_full_content      : true # true, false (default)
+search_provider          : algolia # lunr (default), algolia
+algolia:
+  application_id         : CI235LE145
+  index_name             : RACECARX
+  search_only_api_key    : f6516d85007d3ea0718132959489c034
+  powered_by             : true
+
+# Build settings
+markdown: kramdown
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: Europe/Berlin # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - _projects
+  - _docs
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - "*_coming_soon"
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+
+author:
+  name   : "Mark Brörkens"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Solution Architect who loves to see things moving."
+  links:
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/markbroerkens"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/markbroerkens"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://de.linkedin.com/in/markbroerkens" 
+
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/markbroerkens"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/markbroerkens"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://de.linkedin.com/in/markbroerkens" 
+
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  # _hardware
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      classes: wide
+      sidebar:
+        nav: "docs"
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "projects"
+
+
+
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

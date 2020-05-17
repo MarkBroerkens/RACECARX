@@ -1,0 +1,43 @@
+main:
+  - title: "Projects"
+    url: /projects/
+  - title: "Documentation"
+    url: /docs/
+  - title: "About"
+    url: /about/
+
+docs:
+  - title: "Hardware Setup"
+    children:
+    - title: "Bill of Materials"
+      url: /docs/hardware/bom
+  - title: "Software Setup"
+    children:
+    - title: "Overview"
+      url: /docs/software/
+    - title: "Jetson Native"
+      url: /docs/software/jetson_native
+    - title: "Jetson Docker"
+      url: /docs/software/jetson_docker
+    - title: "Sensors and Actuators"
+      url: /docs/software/peripherals
+    - title: "Host PC"
+      url: /docs/software/host
+  - title: "References"
+    children:
+    - title: "Similiar Projects"
+      url: /docs/references
+
+projects:
+  - title: "Projects"
+    children:
+   # - title: "Calibration"
+   #   url: "/projects/calibration"
+    - title: "Teleoperation"
+      url: "/projects/teleoperation"
+   # - title: "Emergency Braking"
+   #   url: "/projects/emergency_braking"
+    - title: "Wall Follower"
+      url: "/projects/wall_follower"
+   # - title: "AI Autopilot"
+   #   url: "/projects/autopilot"

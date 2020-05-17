@@ -1,0 +1,592 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Setup - Jetson Xavier - RACECAR/X</title>
+<meta name="description" content="This tutorial is based on  ">
+
+
+  <meta name="author" content="Mark Brörkens">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="RACECAR/X">
+<meta property="og:title" content="Software Setup - Jetson Xavier">
+<meta property="og:url" content="http://localhost:4000/RACECARX/docs/software/jetson_native">
+
+
+  <meta property="og:description" content="This tutorial is based on  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-17T10:02:10+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/RACECARX/docs/software/jetson_native">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/RACECARX/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/RACECARX/feed.xml" type="application/atom+xml" rel="alternate" title="RACECAR/X Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/RACECARX/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/RACECARX/">
+          RACECAR/X
+          <span class="site-subtitle">1:10 autonomous vehicle</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/RACECARX/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/RACECARX/docs/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/RACECARX/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Hardware Setup</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/hardware/bom">Bill of Materials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Setup</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/software/">Overview</a></li>
+          
+            <li><a href="/RACECARX/docs/software/jetson_native" class="active">Jetson Native</a></li>
+          
+            <li><a href="/RACECARX/docs/software/jetson_docker">Jetson Docker</a></li>
+          
+            <li><a href="/RACECARX/docs/software/peripherals">Sensors and Actuators</a></li>
+          
+            <li><a href="/RACECARX/docs/software/host">Host PC</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">References</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/references">Similiar Projects</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Setup - Jetson Xavier">
+    <meta itemprop="description" content="This tutorial is based on">
+    <meta itemprop="datePublished" content="2020-05-17T10:02:10+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Setup - Jetson Xavier
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#install-jetpack-43">Install JetPack 4.3</a></li>
+  <li><a href="#enable-password-less-login-via-ssh">Enable password-less login via ssh</a></li>
+  <li><a href="#extend-disk-memory">Extend disk memory</a>
+    <ul>
+      <li><a href="#install-m2-nvme-ssd">Install M.2 NVMe SSD</a></li>
+      <li><a href="#mount-ssd">Mount SSD</a></li>
+      <li><a href="#move-home-to-ssd">Move /home to SSD</a></li>
+      <li><a href="#move-docker-data-directory-to-ssd">Move docker data directory to SSD</a></li>
+    </ul>
+  </li>
+  <li><a href="#add-wifi--bluetooth">Add Wifi / Bluetooth</a>
+    <ul>
+      <li><a href="#install-wifibluetooth-m2-module">Install Wifi/Bluetooth M.2 module</a></li>
+      <li><a href="#enable-wifi">Enable wifi</a></li>
+    </ul>
+  </li>
+  <li><a href="#enable-bluetooth">Enable bluetooth</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>This tutorial is based on</p>
+
+<ul>
+  <li>JetPack 4.3</li>
+  <li>ROS Melodic</li>
+</ul>
+
+<h2 id="install-jetpack-43">Install JetPack 4.3</h2>
+<ul>
+  <li>Download and install <a href="https://developer.nvidia.com/embedded/jetpack">NVIDIA SDK Manager</a></li>
+  <li>Note: Select the manual installation mode. 
+Automatic mode might have issues when starting up in headless mode. See bug 200525134 in the <a href="https://docs.nvidia.com/jetson/l4t/pdf/Jetson_Linux_Driver_Package_Release_Notes_R32.3.1_GA.pdf">L4T Release Notes</a></li>
+  <li>Notes</li>
+  <li>During first boot I configured <em>racecarx</em> as hostname and</li>
+  <li>added a user called <em>mark</em></li>
+</ul>
+
+<h2 id="enable-password-less-login-via-ssh">Enable password-less login via ssh</h2>
+<p>In order to be able to login via ssh into the racecarx without typing your password, you can create a pair of private / public ssh keys and upload the public key in the ~/.ssh/autorized_keys on the racecarx.</p>
+
+<p>Create the ssh keys</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen
+</code></pre></div></div>
+
+<p>upload the public key to racecarx</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id mark@racecarx
+</code></pre></div></div>
+
+<p>Now you schould be able to login without password by typing</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh mark@racecarx
+</code></pre></div></div>
+
+<h2 id="extend-disk-memory">Extend disk memory</h2>
+<h3 id="install-m2-nvme-ssd">Install M.2 NVMe SSD</h3>
+<p>JetsonHacks provides a good description for <a href="https://www.jetsonhacks.com/2018/10/18/install-nvme-ssd-on-nvidia-jetson-agx-developer-kit/">installing the SSD on the NVIDIA Jetson AGX Xavier</a>.</p>
+
+<h3 id="mount-ssd">Mount SSD</h3>
+<p>We mount the partition on the SSD via UUID in order to be robust with respect to potentially changing device identifiers. Especially important if you are using USB devices.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create the mount point</span>
+<span class="nb">sudo mkdir</span> /XavierSSD500
+
+<span class="c"># find UUID of an ext4 partition on SSD. </span>
+<span class="c"># you can search for the label. E.g. label="XavierSSD500"</span>
+<span class="nb">sudo </span>blkid
+
+<span class="c"># backup the original fstab file that</span>
+<span class="nb">sudo cp</span> /etc/fstab /etc/fstab.orig
+
+<span class="c"># add mount information to ssd partition into fstab</span>
+<span class="nb">sudo </span>vim /etc/fstab
+
+<span class="c"># :i (switch to insert mode)</span>
+<span class="c"># insert UUID=&lt;yout uuid is identified above&gt;  /XavierSSD500 ext4 nosuid,nodev,auto,nouser 0 2</span>
+<span class="c"># &lt;ESC&gt;</span>
+<span class="c"># :wq (write and quit)</span>
+
+<span class="c"># mount the ssd according to new data in fstab</span>
+<span class="nb">sudo </span>mount /XavierSSD500
+</code></pre></div></div>
+
+<h3 id="move-home-to-ssd">Move /home to SSD</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create the new home folder on the SSD</span>
+<span class="nb">sudo mkdir</span> /XavierSSD500/home
+<span class="c"># copy the home folder to the ssd preserving symlinks, permissions, access rights, ...</span>
+<span class="nb">sudo </span>rsync <span class="nt">-aXS</span> /home/. /XavierSSD500/home/.
+<span class="nb">sudo mv</span> /home /home.orig<span class="p">;</span> <span class="nb">sudo ln</span> <span class="nt">-s</span> /XavierSSD500/home /home
+<span class="nb">sudo </span>diff <span class="nt">-qr</span> /home /home.orig <span class="c"># diff quietly and move into subfolders</span>
+
+</code></pre></div></div>
+
+<p>Reboot. If everything works:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> /home.orig
+</code></pre></div></div>
+
+<h3 id="move-docker-data-directory-to-ssd">Move docker data directory to SSD</h3>
+<ul>
+  <li>Stop the docker daemon</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service docker stop
+</code></pre></div></div>
+
+<ul>
+  <li>Edit configuration file /etc/docker/daemon.json to tell the docker daemon what is the location of the data directory. The content should look like:</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"runtimes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"nvidia"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nvidia-container-runtime"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"runtimeArgs"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/XavierSSD500/var/lib/docker"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Copy the current data directory to the new one</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>rsync <span class="nt">-aP</span> /var/lib/docker/ /XavierSSD500/var/lib/docker
+</code></pre></div></div>
+
+<ul>
+  <li>Rename the old docker directory</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mv</span> /var/lib/docker /var/lib/docker.old
+</code></pre></div></div>
+
+<p>This is just a sanity check to see that everything is ok and docker daemon will effectively use the new location for its data.</p>
+
+<ul>
+  <li>Restart the docker daemon</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>service docker start
+</code></pre></div></div>
+
+<ul>
+  <li>Test</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>docker run hello-world
+</code></pre></div></div>
+<p>This should download and run the hello-world container. Docker should have created several files in /XavierSSD500/var/lib/docker</p>
+
+<p>If everything worked as expected you can delete the old docker folder /var/lib/docker.old. This is only required in case docker was used before and the folder existed.</p>
+
+<h2 id="add-wifi--bluetooth">Add Wifi / Bluetooth</h2>
+<h3 id="install-wifibluetooth-m2-module">Install Wifi/Bluetooth M.2 module</h3>
+<p>TODO: HW installation of intel 8265 M.2 module</p>
+
+<h3 id="enable-wifi">Enable wifi</h3>
+<p>JetPack 4.3 should detect the intel 8265 M.2 wifi module out of the box. 
+You should see the device wlan0 in the Network Manager:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmcli device
+</code></pre></div></div>
+
+<p>Create a new wlan connection for you ssid.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmcli connection add ifname wlan0 <span class="nb">type </span>wifi ssid <span class="s2">"B3 5GHz"</span>
+</code></pre></div></div>
+
+<p>Configure the authentication mode to WPA and set the password.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nmcli connection edit wifi-wlan0
+</code></pre></div></div>
+
+<p>configure</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+===| nmcli interactive connection editor |===
+
+Editing existing '802-11-wireless' connection: 'wifi-wlan0'
+
+Type 'help' or '?' for available commands.
+Type 'describe [&lt;setting&gt;.&lt;prop&gt;]' for detailed property description.
+
+You may edit the following settings: connection, 802-11-wireless (wifi), 802-11-wireless-security (wifi-sec), 802-1x, ipv4, ipv6, tc, proxy
+nmcli&gt; goto wifi
+You may edit the following properties: ssid, mode, band, channel, bssid, rate, tx-power, mac-address, cloned-mac-address, generate-mac-address-mask, mac-address-blacklist, mtu, seen-bssids, hidden, powersave, mac-address-randomization
+nmcli 802-11-wireless&gt; set mode infrastructure
+nmcli 802-11-wireless&gt; back
+nmcli&gt; goto wifi-sec
+You may edit the following properties: key-mgmt, wep-tx-keyidx, auth-alg, proto, pairwise, group, pmf, leap-username, wep-key0, wep-key1, wep-key2, wep-key3, wep-key-flags, wep-key-type, psk, psk-flags, leap-password, leap-password-flags, wps-method
+nmcli 802-11-wireless-security&gt; set key-mgmt wpa-psk
+nmcli 802-11-wireless-security&gt; set psk myPasswordGoesHere
+nmcli 802-11-wireless-security&gt; save
+Connection 'wifi-wlan0' (f425bcdd-c8a5-48b5-906e-b0b002e8aaaa) successfully updated.
+nmcli 802-11-wireless-security&gt; quit
+
+</code></pre></div></div>
+
+<h2 id="enable-bluetooth">Enable bluetooth</h2>
+<p>Check if the 8265 wifi / bluetooth module is detected</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lspci
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list
+</code></pre></div></div>
+
+<p>Check if bluetooth devices are blocked</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mark@racecarx:~$ rfkill list
+0: bluedroid_pm: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+1: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+2: hci0: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+</code></pre></div></div>
+
+<p>if they are soft blocked, then execute</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>rfkill unblock bluetooth
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-05-17T10:02:10+02:00">May 17, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/RACECARX/docs/software/" class="pagination--pager" title="Software Setup Overview
+">Previous</a>
+    
+    
+      <a href="/RACECARX/docs/software/jetson_docker" class="pagination--pager" title="Software Setup - Docker on Jetson Xavier
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://de.linkedin.com/in/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    <li><a href="/RACECARX/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 RACECAR/X. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/RACECARX/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/RACECARX/assets/js/lunr/lunr.min.js"></script>
+<script src="/RACECARX/assets/js/lunr/lunr-store.js"></script>
+<script src="/RACECARX/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

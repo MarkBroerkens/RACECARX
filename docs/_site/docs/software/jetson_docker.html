@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Setup - Docker on Jetson Xavier - RACECAR/X</title>
+<meta name="description" content="Login to NGC docker registry The docker images are created on top of the l4t-base image from the Nvidia GPU Cloud. Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows. Log in to the NGC container registry. $ sudo docker login nvcr.io  When prompted for your user name, enter the following text: $oauthtoken   ">
+
+
+  <meta name="author" content="Mark Brörkens">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="RACECAR/X">
+<meta property="og:title" content="Software Setup - Docker on Jetson Xavier">
+<meta property="og:url" content="http://localhost:4000/RACECARX/docs/software/jetson_docker">
+
+
+  <meta property="og:description" content="Login to NGC docker registry The docker images are created on top of the l4t-base image from the Nvidia GPU Cloud. Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows. Log in to the NGC container registry. $ sudo docker login nvcr.io  When prompted for your user name, enter the following text: $oauthtoken   ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-17T10:02:10+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/RACECARX/docs/software/jetson_docker">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/RACECARX/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/RACECARX/feed.xml" type="application/atom+xml" rel="alternate" title="RACECAR/X Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/RACECARX/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/RACECARX/">
+          RACECAR/X
+          <span class="site-subtitle">1:10 autonomous vehicle</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/RACECARX/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/RACECARX/docs/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/RACECARX/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Hardware Setup</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/hardware/bom">Bill of Materials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Setup</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/software/">Overview</a></li>
+          
+            <li><a href="/RACECARX/docs/software/jetson_native">Jetson Native</a></li>
+          
+            <li><a href="/RACECARX/docs/software/jetson_docker" class="active">Jetson Docker</a></li>
+          
+            <li><a href="/RACECARX/docs/software/peripherals">Sensors and Actuators</a></li>
+          
+            <li><a href="/RACECARX/docs/software/host">Host PC</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">References</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/RACECARX/docs/references">Similiar Projects</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Setup - Docker on Jetson Xavier">
+    <meta itemprop="description" content="Login to NGC docker registryThe docker images are created on top of the l4t-base image from the Nvidia GPU Cloud.Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows.Log in to the NGC container registry.$ sudo docker login nvcr.ioWhen prompted for your user name, enter the following text:$oauthtoken">
+    <meta itemprop="datePublished" content="2020-05-17T10:02:10+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Setup - Docker on Jetson Xavier
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#login-to-ngc-docker-registry">Login to NGC docker registry</a></li>
+  <li><a href="#get-the-installation-scripts">Get the installation scripts</a></li>
+  <li><a href="#build-docker-container">Build docker container</a></li>
+  <li><a href="#initial-setup">Initial setup</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="login-to-ngc-docker-registry">Login to NGC docker registry</h2>
+<p>The docker images are created on top of the l4t-base image from the Nvidia GPU Cloud.
+Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows.
+Log in to the NGC container registry.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker login nvcr.io
+</code></pre></div></div>
+<p>When prompted for your user name, enter the following text:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$oauthtoken</span>
+</code></pre></div></div>
+
+<p>The $oauthtoken username is a special user name that indicates that you will authenticate with an API key and not a username and password.
+When prompted for your password, enter your NGC API key as shown in the following example.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username: <span class="nv">$oauthtoken</span>
+Password: yourAuthTokenFromNGC
+</code></pre></div></div>
+
+<p>Tip: When you get your API key, copy it to the clipboard so that you can paste the API key into the command shell when you are prompted for your password.</p>
+
+<p>After successful login you will get the following message</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WARNING! Your password will be stored unencrypted in /home/mark/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+</code></pre></div></div>
+
+<p>Reference: <a href="https://docs.nvidia.com/ngc/ngc-user-guide/pullcontainer.html#logging-in-to-ngc-registry">Logging in to the NGC container registry</a></p>
+
+<h2 id="get-the-installation-scripts">Get the installation scripts</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/racecarx
+<span class="nb">cd</span> ~/racecarx
+git clone https://github.com/MarkBroerkens/RACECARX.git
+</code></pre></div></div>
+
+<h2 id="build-docker-container">Build docker container</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>RACECARX/jetson/docker
+<span class="nb">sudo </span>make build
+</code></pre></div></div>
+
+<p>The docker image supports the following features:</p>
+
+<ol>
+  <li>Nvidia base image: l4t-base</li>
+  <li>ROS</li>
+  <li>Realsense camera</li>
+</ol>
+
+<h2 id="initial-setup">Initial setup</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/racecarx/RACECARX
+./installRACECARX_Xavier.sh
+</code></pre></div></div>
+
+<h1 id="run-the-docker-container-in-interactive-mode">Run the docker container in interactive mode</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/racecarx/RACECARX/racecarx.sh
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-05-17T10:02:10+02:00">May 17, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/RACECARX/docs/software/jetson_native" class="pagination--pager" title="Software Setup - Jetson Xavier
+">Previous</a>
+    
+    
+      <a href="/RACECARX/docs/software/peripherals" class="pagination--pager" title="Software Setup - Sensors and Actuators
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://de.linkedin.com/in/markbroerkens" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    <li><a href="/RACECARX/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 RACECAR/X. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/RACECARX/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/RACECARX/assets/js/lunr/lunr.min.js"></script>
+<script src="/RACECARX/assets/js/lunr/lunr-store.js"></script>
+<script src="/RACECARX/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

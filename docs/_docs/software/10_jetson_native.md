@@ -1,6 +1,8 @@
-<TITLE>RACECARX Software Setup</TITLE>
-
-[toc]
+---
+permalink: /docs/software/jetson_native
+title: "Software Setup - Jetson Xavier"
+toc: true
+---
 
 
 This tutorial is based on
@@ -8,14 +10,13 @@ This tutorial is based on
  * JetPack 4.3
  * ROS Melodic
 
-# Setup NVIDIA Xavier
 
 ## Install JetPack 4.3
 * Download and install [NVIDIA SDK Manager](https://developer.nvidia.com/embedded/jetpack)
 * Note: Select the manual installation mode. 
   Automatic mode might have issues when starting up in headless mode. See bug 200525134 in the [L4T Release Notes](https://docs.nvidia.com/jetson/l4t/pdf/Jetson_Linux_Driver_Package_Release_Notes_R32.3.1_GA.pdf)
 * Notes
- * During first boot a configured _racecarx_ as hostname and 
+ * During first boot I configured _racecarx_ as hostname and 
  * added a user called _mark_ 
   
 ## Enable password-less login via ssh
@@ -218,185 +219,3 @@ if they are soft blocked, then execute
 ```bash
 sudo rfkill unblock bluetooth
 ```
-
-# Setup Racecarx docker
-## Build the docker images
-### Login to NGC docker registry
-The docker images are created on top of the l4t-base image from the Nvidia GPU Cloud.
-Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows.
-Log in to the NGC container registry.
-```bash
-$ sudo docker login nvcr.io
-```
-When prompted for your user name, enter the following text:
-```bash
-$oauthtoken
-```
-
-The $oauthtoken username is a special user name that indicates that you will authenticate with an API key and not a username and password.
-When prompted for your password, enter your NGC API key as shown in the following example.
-
-```bash
-Username: $oauthtoken
-Password: yourAuthTokenFromNGC
-```
-
-Tip: When you get your API key, copy it to the clipboard so that you can paste the API key into the command shell when you are prompted for your password.
-
-After successful login you will get the following message
-
-```
-WARNING! Your password will be stored unencrypted in /home/mark/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
-```
-
-Reference: [Logging in to the NGC container registry](https://docs.nvidia.com/ngc/ngc-user-guide/pullcontainer.html#logging-in-to-ngc-registry)
-
-### Get the installation scripts
-
-````bash
-mkdir ~/racecarx
-cd ~/racecarx
-git clone https://github.com/MarkBroerkens/RACECARX.git
-````
-
-### Build docker container
-```bash
-cd RACECARX/jetson/docker
-sudo make build
-```
-
-TODO: describe content of racecarx docker image
-
-1. l4t-base
-2. ros
-3. realsense camera
-
-
-### Initial setup
-```bash
-cd ~/racecarx/RACECARX
-./installRACECARX_Xavier.sh
-```
-
-
-
-
-
-
-
-# Setup sensors and actuators
-## Controller Sony DualShock 4 V2
-<TODO> how to connect pair controller?
-
-
-```bash
-sudo apt-get install joystick
-ls /dev/input
-jstest /dev/input/js0
-```
-
-## Realsense d435i camera
-Run the racecarx docker container in interactive mode
-
-```bash
-~/racecarx/RACECARX/racecarx.sh
-```
-
-Run the firmware update tool and print the connected devices
-
-```bash
-rs-fw-update -l
-```
-
-My oputput looks like this
-
-```
-connected devices:
-1) Name: Intel RealSense D435I, serial number: xxxxxxxxx, update serial number: xxxxxxxx, firmware version: 05.11.06.250, USB type: 3.2
-```
-
-Find the latest firmware and copy its link 
-[latest firmware](https://downloadcenter.intel.com/download/29255/Latest-Firmware-for-Intel-RealSense-D400-Product-Family?product=128255)
-
-download and install latest firmware. See also [here](https://dev.intelrealsense.com/docs/firmware-update-tool)
-
-```bash
-cd /tmp
-wget https://downloadmirror.intel.com/29255/eng/D400_Series_Development_FW_5_12_1.zip
-apt update # gets the index
-apt-get install unzip # installs unzip
-unzip D400_Series_Development_FW_5_12_1.zip
-rs-fw-update -f Signed_Image_UVC_5_12_1_0.bin
-```
-
-we should see the updated firmware version
-
-```bash
-rs-fw-update -l
-```
-
-
-
-
-## Wide angle camera
-### 
-
-## Focbox Electronic Speed Control
-Get the [VESC Tool](https://vesc-project.com/vesc_tool). The free version is sufficient. The required Firmware [VESC_servoout.bin](https://github.com/vedderb/vesc_tool/blob/master/res/firmwares/410_o_411_o_412/VESC_servoout.bin) is available in the [vedderb/vesc_tool](https://github.com/vedderb/vesc_tool) github repository at [res/firmwares/410_o_411_o_412](https://github.com/vedderb/vesc_tool/blob/master/res/firmwares/410_o_411_o_412/)
-
-## SparkFun 9DoF Razor IMU M0
-
-## RPLidar A1M8
-
-## Intel RealSense Depth Camera D435i
-get a native Windows 10 installation and follow the [Intel update instructions](https://downloadcenter.intel.com/download/28481/Latest-Firmware-for-Intel-RealSense-D400-Product-Family?v=t)
-
-Note: The Linux updater is made for linux x86 and thus cannot be executed on the Xavier
-
-
-
-
-
-# Install Racecarx
-
-
-
-
-
-# Setting up the hardware components
-
-
-
-
-# Integration
-## Install ROS Melodic
-The racecar code runs using ROS (Robot Operating System) libraries, more on that later. Now let's install ROS:
-(For more detailed instructions on how to install: http://wiki.ros.org/kinetic/Installation/Ubuntu). Or take the short path:
-
-```bash
-cd ~/git
-git clone https://github.com/MarkBroerkens/RACECARX-installROSXavier.git
-```
-
-## Install ROS Nodes for RACECAR/X
-```bash
-cd ~/git
-git clone https://github.com/MarkBroerkens/RACECARX-ROS.git
-```
-
-
-## Autostart ROS at boot
-get robot-upstart from source (marks repos)
-
-```bash
-
-```
-
-
-# References
-* [OpenZeka Marc](https://github.com/openzeka/openzeka-marc-doc/edit/master/Documentation.md)
-* [MIT RACECAR](https://mit-racecar.github.io)
