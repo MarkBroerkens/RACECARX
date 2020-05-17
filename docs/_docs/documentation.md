@@ -5,5 +5,5 @@ sidebar:
   nav: "docs"
 ---
 
-{% include figure image_path="/assets/images/racecarx.jpg"  caption="RACECAR/X" %}
+{% include figure image_path="/assets/images/RACECARX.jpg"  caption="RACECAR/X" %}
 
