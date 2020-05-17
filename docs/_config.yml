@@ -74,6 +74,8 @@ exclude:
   - README
   - tmp
   - "*_coming_soon"
+  - [vendor]
+
 keep_files:
   - .git
   - .svn
