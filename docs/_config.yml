@@ -34,8 +34,21 @@ algolia:
   search_only_api_key    : f6516d85007d3ea0718132959489c034
   powered_by             : true
 
-# Build settings
-markdown: kramdown
+og_image: /assets/images/RACECARX.jpg
+
+# Social Sharing
+twitter:
+  username               : &twitter "markbroerkens"
+og_image                 : "/assets/images/RACECARX.jpg" # Open Graph/Twitter default site image
+# For specifying social profiles, used in _includes/seo.html
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - "https://twitter.com/markbroerkens"
+    - "https://de.linkedin.com/in/markbroerkens" 
+
 
 # Outputting
 permalink: /:categories/:title/
