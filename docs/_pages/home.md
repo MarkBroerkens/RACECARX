@@ -19,7 +19,7 @@ feature_row:
     alt: "Tipps and Tricks"
     title: "Tipps and Tricks"
     excerpt: "Tipps and tricks for setting up the hardware and software platform."
-    url: "/docs/hardware/"
+    url: "/docs/software/jetson_native/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/docker_tf_feature.png
