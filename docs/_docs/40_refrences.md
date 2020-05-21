@@ -8,7 +8,7 @@ sidebar:
 ## Similar Projects
 RACECAR/X is inspired by the following projects. 
 
-* [MIT racecar](https://mit-racecar.github.io/) - MIT RACECAR is an open-source powerful platform for robotics research and education.
+* [MIT RACECAR](https://mit-racecar.github.io/) - MIT RACECAR is an open-source powerful platform for robotics research and education.
 * [Jetson racecar](https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
 * [F1/10 Autonomous Racing Competition](http://f1tenth.org/) - international community of researchers, engineers, and autonomous systems enthusiasts. It was originally founded at the University of Pennsylvania in 2016 but has since spread to many other institutions worldwide. Great [build](https://f1tenth.org/build.html) instructions and [lectures](https://f1tenth.org/learn.html).
 * [OpenZeka Marc](https://github.com/openzeka/marc) - ([translated to english](http://translate.google.com/translate?hl=&sl=tr&tl=en&u=https%3A%2F%2Fopenzeka.com%2Fmarc%2F&sandbox=1))
