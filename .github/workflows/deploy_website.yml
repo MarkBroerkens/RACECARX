@@ -24,6 +24,6 @@ jobs:
       - name: Build & Deploy to GitHub Pages
         uses: markbroerkens/jekyll4-deploy-gh-pages@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
