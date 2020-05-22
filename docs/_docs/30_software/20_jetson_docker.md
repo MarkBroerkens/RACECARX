@@ -49,7 +49,7 @@ git clone https://github.com/MarkBroerkens/RACECARX.git
 
 ## Build docker container
 ```bash
-cd RACECARX/jetson/docker
+cd RACECARX/software/jetson/docker
 sudo make build
 ```
 
@@ -62,7 +62,7 @@ The docker image supports the following features:
 
 ## Initial setup
 ```bash
-cd ~/racecarx/RACECARX
+cd ~/racecarx/RACECARX/software
 ./installRACECARX_Xavier.sh
 ```
 
@@ -70,7 +70,8 @@ cd ~/racecarx/RACECARX
 # Run the docker container in interactive mode
 
 ```bash
-~/racecarx/RACECARX/racecarx.sh
+cd ~/racecarx/RACECARX/software/
+./jetson/racecarx.sh
 ```
 
 
