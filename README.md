@@ -1,4 +1,8 @@
+![Deploy Website](https://github.com/MarkBroerkens/RACECARX/workflows/Deploy%20Website/badge.svg)
+
 # RACECAR/X
+
+
 1:10 autonomous RC robocar that is controlled by NVIDIA AGX Xavier.
 
 ![RACECAR/X](RACECARX.jpg)
