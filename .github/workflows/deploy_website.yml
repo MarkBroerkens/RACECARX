@@ -23,7 +23,7 @@ jobs:
           ${{ runner.os }}-gems-
 
     # Specify the Jekyll source location as a parameter
-    - uses: markbroerkens/jekyll-action
+    - uses: markbroerkens/jekyll-action@master
       env:
         JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}
       with:
