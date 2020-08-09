@@ -9,6 +9,6 @@ redirect_from:
 
 This tutorial is based on
 
- * JetPack 4.3
+ * JetPack 4.4
  * ROS Melodic
 

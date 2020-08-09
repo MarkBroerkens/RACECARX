@@ -4,7 +4,7 @@ title: "Software Setup - Jetson Xavier"
 toc: true
 ---
 
-## Install JetPack 4.3
+## Install JetPack 4.4
 * Download and install [NVIDIA SDK Manager](https://developer.nvidia.com/embedded/jetpack)
 * Note: Select the manual installation mode. 
   Automatic mode might have issues when starting up in headless mode. See bug 200525134 in the [L4T Release Notes](https://docs.nvidia.com/jetson/l4t/pdf/Jetson_Linux_Driver_Package_Release_Notes_R32.3.1_GA.pdf)
