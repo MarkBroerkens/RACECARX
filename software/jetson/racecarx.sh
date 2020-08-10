@@ -1,5 +1,4 @@
 #!/bin/sh
-# #-u $(id -u):$(id -g) \
 sudo docker run \
 	-it \
 	--runtime nvidia \
@@ -12,4 +11,4 @@ sudo docker run \
 	-v $HOME/racecarx/workspace:/racecarx/workspace \
 	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
 	--privileged \
-	racecarx:base
+	ros:melodic-ros-base-l4t-r32.4.3

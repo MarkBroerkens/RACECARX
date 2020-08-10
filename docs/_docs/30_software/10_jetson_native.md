@@ -88,7 +88,9 @@ sudo rm -rf /home.orig
 sudo service docker stop
 ```
 
-* Edit configuration file /etc/docker/daemon.json to tell the docker daemon what is the location of the data directory. The content should look like:
+* Edit configuration file /etc/docker/daemon.json to tell the docker daemon the location of the data directory. Additionally, we anable access to the CUDA compiler (nvcc) during docker build operations by adding "default-runtime": "nvidia":
+
+The content should look like:
 
 ```json
 {
@@ -98,6 +100,7 @@ sudo service docker stop
             "runtimeArgs": []
         }
     },
+    "default-runtime": "nvidia",
     "graph": "/XavierSSD500/var/lib/docker"
 }
 ```
@@ -136,7 +139,7 @@ If everything worked as expected you can delete the old docker folder /var/lib/d
 TODO: HW installation of intel 8265 M.2 module
 
 ### Enable wifi
-JetPack 4.3 should detect the intel 8265 M.2 wifi module out of the box. 
+JetPack 4.4 should detect the intel 8265 M.2 wifi module out of the box. 
 You should see the device wlan0 in the Network Manager:
 
 ```bash
