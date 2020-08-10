@@ -7,25 +7,18 @@
 # create folder
 mkdir -p $HOME/racecarx
 mkdir -p $HOME/racecarx/data
-mkdir -p $HOME/racecarx/workspace
-mkdir -p $HOME/racecarx/.ros
-
-# install udev rules
-./scripts/installRACECARXUdev.sh
-
-# make sure we have write access to the VESC and IMU devices
-#sudo adduser $USER dialout
+mkdir -p $HOME/racecarx/workspac-p $HOME/racecarx/.ros
 
 # install the RACECARX software
-# -u $(id -u):$(id -g) \
+
 sudo docker run \
 	--runtime nvidia \
 	-v $HOME/racecarx/workspace:/racecarx/workspace \
 	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
 	-v $HOME/racecarx/.ros:/root/.ros \
 	--privileged \
-	racecarx:base \
-	/bin/sh -c "/racecarx/RACECARX/scripts/installRACECARX.sh"
+	ros:melodic-ros-base-l4t-r32.4.3 \
+	/bin/sh -c "/racecarx/RACECARX/software/jetson/commands/installRACECARX.sh"
 
 echo "The RACECAR Packages should now be installed in the directory $HOME/racecarx/workspace"
 echo " " 

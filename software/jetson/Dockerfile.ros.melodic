@@ -31,12 +31,14 @@ RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E
 # install ROS packages
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-		ros-melodic-ros-base \
-		ros-melodic-image-transport \
-		ros-melodic-vision-msgs \
+	ros-melodic-ros-base \
+	ros-melodic-image-transport \
+	ros-melodic-vision-msgs \
         ros-melodic-ackermann-msgs \
         ros-melodic-joy \
-        python-rosdep \
+        ros-melodic-cv-bridge \
+	ros-melodic-tf \
+	python-rosdep \
         python-rosinstall \
         python-rosinstall-generator \
         python-wstool \
