@@ -5,39 +5,8 @@ toc: true
 ---
 
 
-## Login to NGC docker registry
+
 The docker images are created on top of the l4t-base image from the Nvidia GPU Cloud.
-Before accessing locked NGC content, you must sign up for an NGC account and obtain an API key as explained in the NGC Getting Started Guide. Then log in to the NGC registry from the command line as follows.
-Log in to the NGC container registry.
-```bash
-$ sudo docker login nvcr.io
-```
-When prompted for your user name, enter the following text:
-```bash
-$oauthtoken
-```
-
-The $oauthtoken username is a special user name that indicates that you will authenticate with an API key and not a username and password.
-When prompted for your password, enter your NGC API key as shown in the following example.
-
-```bash
-Username: $oauthtoken
-Password: yourAuthTokenFromNGC
-```
-
-Tip: When you get your API key, copy it to the clipboard so that you can paste the API key into the command shell when you are prompted for your password.
-
-After successful login you will get the following message
-
-```
-WARNING! Your password will be stored unencrypted in /home/mark/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
-```
-
-Reference: [Logging in to the NGC container registry](https://docs.nvidia.com/ngc/ngc-user-guide/pullcontainer.html#logging-in-to-ngc-registry)
 
 ## Get the installation scripts
 
@@ -47,16 +16,36 @@ cd ~/racecarx
 git clone https://github.com/MarkBroerkens/RACECARX.git
 ```
 
+## Install Udev Rules for the Peripherals 
+(TODO: should go to pheripherals)
+
+
+* Alias the Sparkfun 9DoF as /dev/imu
+* Alias for electronic speed controller as /dev/vesc
+* Alias for the rplidar as /dev/rplidar
+* ALias for Intel RealSense D435i camera
+
+```bash
+cd ~/racecarx/RACECARX/software/jetson
+./scripts/jetsonInstallUdev.sh
+```
+
+make sure we have write access to the VESC and IMU devices
+
+```bash
+sudo adduser $USER dialout
+```
+
 ## Build docker container
 ```bash
-cd RACECARX/software/jetson/docker
-sudo make build
+cd ~/racecarx/RACECARX/software/jetson
+./scripts/docker_build_ros.sh
 ```
 
 The docker image supports the following features:
 
-1. Nvidia base image: l4t-base
-2. ROS
+1. Nvidia base image: l4t-base (r32.4.3)
+2. ROS melodic
 3. Realsense camera
 
 

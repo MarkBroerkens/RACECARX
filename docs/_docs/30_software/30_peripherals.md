@@ -6,9 +6,22 @@ toc: true
 
 
 ## Controller Sony DualShock 4 V2
+Connect the Controller via bluetooth
+
+```bash
+sudo bluetoothctl
+[bluetooth]# agent on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+[bluetooth]# pair DC:0C:FF:B2:79:EE
+[bluetooth]# <Authorize...< yes
+```
+
+Test the controller
+
 ```bash
 sudo apt-get install joystick
-ls /dev/input
+ls /dev/input 
 jstest /dev/input/js0
 ```
 
