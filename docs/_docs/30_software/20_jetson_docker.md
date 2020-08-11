@@ -51,16 +51,16 @@ The docker image supports the following features:
 
 ## Initial setup
 ```bash
-cd ~/racecarx/RACECARX/software
-./installRACECARX_Xavier.sh
+cd ~/racecarx/RACECARX/software/jetson
+./scripts/docker_build_racecarx.sh
 ```
 
 
 # Run the docker container in interactive mode
 
 ```bash
-cd ~/racecarx/RACECARX/software/
-./jetson/racecarx.sh
+cd ~/racecarx/RACECARX/software/jetson
+./scripts/docker_run_racecarx.sh
 ```
 
 
