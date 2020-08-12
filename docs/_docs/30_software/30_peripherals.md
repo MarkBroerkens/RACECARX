@@ -10,12 +10,73 @@ Connect the Controller via bluetooth
 
 ```bash
 sudo bluetoothctl
+```
+Enable the agent and set it as default:
+
+```bash
 [bluetooth]# agent on
 [bluetooth]# default-agent
-[bluetooth]# scan on
-[bluetooth]# pair DC:0C:FF:B2:79:EE
-[bluetooth]# <Authorize...< yes
 ```
+
+Power on the Bluetooth controller, and set it as discoverable and pairable:
+
+```bash
+[bluetooth]# power on
+[bluetooth]# discoverable on
+[bluetooth]# pairable on
+```
+
+Scan for devices:
+
+```bash
+[bluetooth]# scan on
+```
+
+Put the DualShock 4 into pairing mode by pressing and holding the PlayStation and Share buttons until the light bar starts flashing.
+
+Discover the DualShock 4 MAC address:
+
+```bash
+[bluetooth]# devices
+```
+
+Pair with the DualShock 4:
+
+```bash
+[bluetooth]# pair DC:0C:FF:B2:79:EE
+```
+
+Allow the service authorization request:
+
+```bash
+[agent]Authorize service service_uuid (yes/no): yes
+```
+
+Trust the DualShock 4:
+
+```bash
+[bluetooth]# trust DC:0C:FF:B2:79:EE
+```
+
+The DualShock 4 is now paired.
+
+Turn the DualShock 4 off when it's no longer in use by pressing and holding the PlayStation button for 10 seconds. Press the PlayStation button to use the DualShock 4 again.
+
+
+```
+
+
+
+
+
+
+
+
+
+
+[bluetooth]#devices
+
+
 
 Test the controller
 
@@ -52,17 +113,23 @@ download and install latest firmware. See also [here](https://dev.intelrealsense
 
 ```bash
 cd /tmp
-wget https://downloadmirror.intel.com/29255/eng/D400_Series_Development_FW_5_12_1.zip
+wget https://downloadmirror.intel.com/29703/eng/D400_Series_Development_FW_5_12_6_0.zip
 apt update # gets the index
 apt-get install unzip # installs unzip
-unzip D400_Series_Development_FW_5_12_1.zip
-rs-fw-update -f Signed_Image_UVC_5_12_1_0.bin
+unzip D400_Series_Development_FW_5_12_6_0.zip
+rs-fw-update -f Signed_Image_UVC_5_12_6_0.bin
 ```
 
 we should see the updated firmware version
 
 ```bash
 rs-fw-update -l
+```
+
+After the update my output looks like this:
+```
+connected devices:
+1) Name: Intel RealSense D435I, serial number: xxxxxxxxx, update serial number: xxxxxxxx, firmware version: 05.12.06.00, USB type: 3.2
 ```
 
 
