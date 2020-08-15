@@ -11,8 +11,14 @@ The docker images are created on top of the l4t-base image from the Nvidia GPU C
 ## Get the installation scripts
 
 ```bash
-mkdir ~/racecarx
-cd ~/racecarx
+echo 'export RACECARX=$HOME/racecarx' >> ~/.bashrc
+echo 'export RACECARX_JETSON=$RACECARX/git/RACECARX/software/jetson' >> ~/.bashrc
+source ~/.bashrc
+```
+
+```bash
+mkdir -p $RACECARX/git
+cd $RACECARX/git
 git clone https://github.com/MarkBroerkens/RACECARX.git
 ```
 
@@ -26,7 +32,7 @@ git clone https://github.com/MarkBroerkens/RACECARX.git
 * ALias for Intel RealSense D435i camera
 
 ```bash
-cd ~/racecarx/RACECARX/software/jetson
+cd $RACECARX_JETSON
 ./scripts/jetsonInstallUdev.sh
 ```
 
@@ -38,7 +44,7 @@ sudo adduser $USER dialout
 
 ## Build docker container
 ```bash
-cd ~/racecarx/RACECARX/software/jetson
+cd $RACECARX_JETSON
 ./scripts/docker_build_ros.sh
 ```
 
@@ -51,7 +57,7 @@ The docker image supports the following features:
 
 ## Initial setup
 ```bash
-cd ~/racecarx/RACECARX/software/jetson
+cd $RACECARX_JETSON
 ./scripts/docker_build_racecarx.sh
 ```
 
@@ -59,7 +65,7 @@ cd ~/racecarx/RACECARX/software/jetson
 # Run the docker container in interactive mode
 
 ```bash
-cd ~/racecarx/RACECARX/software/jetson
+cd $RACECARX_JETSON
 ./scripts/docker_run_racecarx.sh
 ```
 

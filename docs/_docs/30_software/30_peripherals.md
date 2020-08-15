@@ -63,20 +63,6 @@ The DualShock 4 is now paired.
 Turn the DualShock 4 off when it's no longer in use by pressing and holding the PlayStation button for 10 seconds. Press the PlayStation button to use the DualShock 4 again.
 
 
-```
-
-
-
-
-
-
-
-
-
-
-[bluetooth]#devices
-
-
 
 Test the controller
 
