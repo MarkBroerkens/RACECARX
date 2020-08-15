@@ -11,4 +11,5 @@ sudo docker run \
 	-v $HOME/racecarx/workspace:/racecarx/workspace \
 	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
 	--privileged \
-	ros:melodic-ros-base-l4t-r32.4.3
+	ros:melodic-ros-base-l4t-r32.4.3 \
+	$@
