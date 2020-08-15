@@ -5,22 +5,23 @@
 #  docker image racecarx is created
 
 # create folder
-mkdir -p $HOME/racecarx
-mkdir -p $HOME/racecarx/data
-mkdir -p $HOME/racecarx/workspac-p $HOME/racecarx/.ros
+mkdir -p $RACECARX
+mkdir -p $RACECARX/data
+mkdir -p $RACECARX/workspace
+mkdir -p $RACECARX/.ros
 
 # install the RACECARX software
 
 sudo docker run \
 	--runtime nvidia \
-	-v $HOME/racecarx/workspace:/racecarx/workspace \
-	-v $HOME/racecarx/RACECARX:/racecarx/RACECARX \
-	-v $HOME/racecarx/.ros:/root/.ros \
+	-v $RACECARX/workspace:/racecarx/workspace \
+	-v $RACECARX_JETSON/commands:/racecarx/bin \
+	-v $RACECARX//.ros:/root/.ros \
 	--privileged \
 	ros:melodic-ros-base-l4t-r32.4.3 \
-	/bin/sh -c "/racecarx/RACECARX/software/jetson/commands/installRACECARX.sh"
+	/bin/sh -c "/racecarx/bin/installRACECARX.sh"
 
-echo "The RACECAR Packages should now be installed in the directory $HOME/racecarx/workspace"
+echo "The RACECAR Packages should now be installed in the directory $RACECARX/workspace"
 echo " " 
 
 
