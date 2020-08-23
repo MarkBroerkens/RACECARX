@@ -1,0 +1,18 @@
+version: "3"
+services:
+
+  racecarx:
+    image: ros:melodic-ros-base-l4t-r32.4.3
+    privileged: true
+    network_mode: host
+    volumes:
+      - "/tmp/.X11-unix/:/tmp/.X11-unix"
+      - "/dev:/dev"
+      - "${RACECARX}/.ros:/root/.ros"
+      - "${RACECARX}/data:/racecarx/data"
+      - "${RACECARX}/workspace:/racecarx/workspace"
+      - "${RACECARX_JETSON}/commands:/racecarx/bin"
+    environment:
+      - DISPLAY=${DISPLAY}
+    entrypoint: /racecarx/bin/teleop.sh
+

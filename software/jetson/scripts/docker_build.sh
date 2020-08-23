@@ -10,5 +10,5 @@ shift
 
 echo "Building $CONTAINER container..."
 
-sudo docker build -t $CONTAINER -f $DOCKERFILE "$@" --no-cache .
+sudo docker build -t $CONTAINER -f $DOCKERFILE "$@" .
 
