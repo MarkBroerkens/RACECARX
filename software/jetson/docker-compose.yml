@@ -14,5 +14,5 @@ services:
       - "${RACECARX_JETSON}/commands:/racecarx/bin"
     environment:
       - DISPLAY=${DISPLAY}
-    entrypoint: /racecarx/bin/teleop.sh
+    entrypoint: /racecarx/bin/slam.sh
 

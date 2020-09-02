@@ -5,7 +5,7 @@
 ARG BASE_IMAGE=nvcr.io/nvidia/l4t-base:r32.4.3
 FROM ${BASE_IMAGE}
 
-ARG ROS_PKG=ros_base
+ARG ROS_PKG=desktop
 ENV ROS_DISTRO=melodic
 ENV ROS_ROOT=/opt/ros/${ROS_DISTRO}
 
@@ -31,14 +31,17 @@ RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E
 # install ROS packages and required libraries
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-	ros-melodic-ros-base \
-	ros-melodic-image-transport \
-	ros-melodic-vision-msgs \
-    ros-melodic-ackermann-msgs \
-    ros-melodic-joy \
-    ros-melodic-cv-bridge \
-	ros-melodic-tf \
-	python-rosdep \
+    ros-${ROS_DISTRO}-${ROS_PKG} \
+    ros-${ROS_DISTRO}-image-transport \
+    ros-${ROS_DISTRO}-vision-msgs \
+    ros-${ROS_DISTRO}-ackermann-msgs \
+    ros-${ROS_DISTRO}-joy \
+    ros-${ROS_DISTRO}-cv-bridge \
+    ros-${ROS_DISTRO}-tf \
+    ros-${ROS_DISTRO}-navigation \
+    ros-${ROS_DISTRO}-teb-local-planner \
+    ros-${ROS_DISTRO}-slam-toolbox \
+    python-rosdep \
     python-rosinstall \
     python-rosinstall-generator \
     python-wstool \
