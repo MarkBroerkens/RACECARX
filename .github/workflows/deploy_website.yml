@@ -26,6 +26,5 @@ jobs:
     - uses: markbroerkens/jekyll-action@master
       env:
         JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}
-        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       with:
         jekyll_src: 'docs'

@@ -25,12 +25,7 @@ github_username: MarkBroerkens
 
 search: true
 search_full_content      : true # true, false (default)
-search_provider          : algolia # lunr (default), algolia
-algolia:
-  application_id         : CI235LE145
-  index_name             : RACECARX
-  search_only_api_key    : f6516d85007d3ea0718132959489c034
-  powered_by             : true
+search_provider          : lunr # lunr (default), algolia
 
 og_image: /assets/images/RACECARX.jpg
 
@@ -74,6 +69,7 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
+  - "*.graffle"
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
