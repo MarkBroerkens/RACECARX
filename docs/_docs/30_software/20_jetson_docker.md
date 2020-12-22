@@ -42,6 +42,10 @@ make sure we have write access to the VESC and IMU devices
 sudo adduser $USER dialout
 ```
 
+Further references:
+
+* [ROS and Udev Rules](https://www.clearpathrobotics.com/assets/guides/kinetic/ros/Udev%20Rules.html)
+
 ## Build docker container
 ```bash
 cd $RACECARX_JETSON

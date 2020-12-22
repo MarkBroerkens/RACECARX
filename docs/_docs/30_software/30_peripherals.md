@@ -128,7 +128,7 @@ connected devices:
 Install Arduino Firmware as described [here](https://github.com/MarkBroerkens/razor_imu_9dof)
 
 ## RPLidar A1M8
-INstallation consists of proper configuration of UDEV rules.
+Installation consists of proper configuration of UDEV rules.
 
 
 

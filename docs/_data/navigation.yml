@@ -11,6 +11,8 @@ docs:
     children:
     - title: "Bill of Materials"
       url: /docs/hardware/bom
+    - title: "Components"
+      url: /docs/hardware/architecture
   - title: "Software Setup"
     children:
     - title: "Overview"
