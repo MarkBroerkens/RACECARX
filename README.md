@@ -30,8 +30,8 @@ Please find furher documentation on the [RACECARX website](https://markbroerkens
 ## Contribution Guide
 You are very welcome to contribute to the project. E.g. by 
 
-* reporting an issue via the [github issue](issues) tracker 
-* creating a [pull](pulls) request. 
+* reporting an issue via the [github issue](https://github.com/MarkBroerkens/RACECARX/issues) tracker 
+* creating a [pull](https://github.com/MarkBroerkens/RACECARX/pulls) request. 
 
 The [Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/) apply.
 
