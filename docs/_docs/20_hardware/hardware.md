@@ -21,12 +21,11 @@ price ~3000€
 | 10x USB 3.0 hub | [ORICO 40W 10 Ports USB 3.0 hub](https://www.amazon.de/gp/product/B075QZ88DM) (32,99€) | | |
 | usb c to usb b adapter | [USB 3.1 Type C (USB-C) auf Type B (USB-B) Kable](https://www.amazon.de/gp/product/B00UXKTJE0) | | |
 | 2D Lidar | [Slamtec RPLidar A1M8](https://www.exp-tech.de/sensoren/entfernungnaeherung/8946/rplidar-a1m8-360-degree-laser-scanner-kit-12m) (99,90€) | [Introduction and Datasheet](http://bucket.download.slamtec.com/e9e096e9d9f30205d665260abe2cfb0c2dd62efa/LD108_SLAMTEC_rplidar_datasheet_A1M8_v1.0_en.pdf) | |
-| IMU | [SparkFun MPU-9250 9DoF Razor IMU M0](https://eckstein-shop.de/SparkFun-9DoF-Razor-IMU-M0-MPU-9250) (34,95€) | [Hookup Guide](https://learn.sparkfun.com/tutorials/9dof-razor-imu-m0-hookup-guide?_ga=1.59377581.1661814591.1474882863) [Datasheet MPU-9250](https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/MPU9250REV1.0.pdf) [Datasheet SAMD21](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/Atmel-42181-SAM-D21_Datasheet.pdf) | |
-| Camera | [OpenMV Cam M7](https://www.mybotshop.de/OpenMV-Cam-M7) (77,95€) with [fesheye lens](https://www.mybotshop.de/OpenMV-Kameraobjektiv-Ultra-Wide-Angle-Objektiv)(16,95€) | [OpenMV Cam M7](https://openmv.io/products/openmv-cam-m7) | |
-| | [Intel realsense D435i](https://click.intel.com/intel-realsense-depth-camera-d435i-imu.html) (~250€)| [Intel Realsense D400 DatSheet](https://www.intel.com/content/dam/support/us/en/documents/emerging-technologies/intel-realsense-technology/Intel-RealSense-D400-Series-Datasheet.pdf)| |
+| IMU | [SparkFun MPU-9250 9DoF Razor IMU M0](https://www.mouser.de/new/sparkfun/sparkfun-dev-16832-openlog-artemis/) (34,95€) | [Hookup Guide](https://learn.sparkfun.com/tutorials/9dof-razor-imu-m0-hookup-guide?_ga=1.59377581.1661814591.1474882863) [Datasheet MPU-9250](https://cdn.sparkfun.com/assets/learn_tutorials/5/5/0/MPU9250REV1.0.pdf) [Datasheet SAMD21](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/Atmel-42181-SAM-D21_Datasheet.pdf) | |
+| Camera | [Intel realsense D435i](https://click.intel.com/intel-realsense-depth-camera-d435i-imu.html) (~250€)| [Intel Realsense D400 DatSheet](https://www.intel.com/content/dam/support/us/en/documents/emerging-technologies/intel-realsense-technology/Intel-RealSense-D400-Series-Datasheet.pdf)| |
 | 2 x Hobby glass | [25cm x 50cm x 4mm](https://www.hornbach.de/shop/Hobbyglas-4x250x500-mm-Glatt-klar/1477845/artikel.html?WT.mc_ag=41053541180&gclid=EAIaIQobChMImYKWxoXb3gIV67DtCh0h6gKkEAQYASABEgITS_D_BwE&WT.srch=1&WT.mc_id=DE_P_BS_AW_766103971) (2 x ~6,00€) | | |
 | M3 standoffs/nuts/etc. | [M3 Nylon Black Hex Screw Nut Spacer Standoff (260 pieces)](https://www.amazon.de/gp/product/B01MFF5XIC) | | | 
-| controller | [DualShock 4 USB Wireless Adaptor](https://www.amazon.de/gp/product/B01KHFIO82) (66,90€) and [PlayStation 4 - DualShock 4 Wireless Controller](https://www.amazon.de/gp/product/B01GVQUX3U) (60,13€) | | |
+| controller | [PlayStation 4 - DualShock 4 Wireless Controller](https://www.amazon.de/gp/product/B01GVQUX3U) (60,13€) | | |
 
 
 # Tools
